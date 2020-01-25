@@ -1,1 +1,0 @@
-# grapht.ai
