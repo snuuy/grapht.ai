@@ -1,1 +1,1 @@
-# derm.ai
+# grapht.ai
