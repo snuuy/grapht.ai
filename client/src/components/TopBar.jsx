@@ -5,8 +5,11 @@ class TopBar extends Component {
 
   render() {
     return (
-      <div className="topbar">
-        <img className="logo" src={require("../assets/logo.png")}></img>
+      <div>
+        <div className="topbar">
+          <img className="logo" src={require("../assets/logo.png")}></img>
+        </div>
+        <div className="bgcolor"></div>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 body,
 html {
   background: white;
+  height: 100%;
 }
 
 .bg-green {
@@ -58,7 +59,7 @@ html {
 
 .topbar {
   background-color: blue;
-  height: 75px;
+  height: 65px;
   width: max;
 }
 
@@ -86,4 +87,11 @@ html {
 
 a:hover {
   text-decoration: none !important;
+}
+
+.bgcolor {
+  background-color: #f5f5f5;
+  width: 250vh;
+  margin: 0;
+  padding: 0;
 }
