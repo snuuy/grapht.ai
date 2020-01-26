@@ -22,8 +22,8 @@ class Upload extends Component {
 
   render() {
     return (
-      <div  onClick={() => this.fileUpload.click()} className="rounded box-shadow p-4 text-center upload-btn">
-          <img src={add_icon}/>
+      <div onClick={() => this.fileUpload.click()} className="rounded box-shadow p-4 text-center upload-btn">
+          <img style={{width:"50px"}} src={add_icon}/>
           <div className="mt-3 font-weight-bold h5 text-white">Upload image</div>
           <input type="file" id="image"
             accept="image/png, image/jpeg" style={{display:"none"}} 

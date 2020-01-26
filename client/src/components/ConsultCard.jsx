@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import fillerimg from "../assets/fillerimg.png";
 
-class CardView extends Component {
+class ConsultCard extends Component {
   state = {};
 
   render() {
@@ -64,4 +64,4 @@ class CardView extends Component {
   }
 }
 
-export default CardView;
+export default ConsultCard;

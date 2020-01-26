@@ -22,11 +22,11 @@ class DashBoard extends Component {
 
           <div className="col-10 bg-white">
             <div className="row">
-              <div className="col">
-                <Upload></Upload>
+              <div className="col-3 pt-4 pr-0 pl-4">
+                <Upload />
               </div>
-              <div className="col">
-                <CardView></CardView>
+              <div className="col-9 px-4">
+                <CardView />
               </div>
             </div>
           </div>
