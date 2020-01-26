@@ -18,7 +18,7 @@ class DashBoard extends Component {
   }
 
   handleUpload(results) {
-    this.setState({ results: results, isUploaded: true, isRequested: false });
+    this.setState({ results: results, isUploaded: true, isRequested: false, isNextStep: false });
   }
 
   componentDidMount() {
@@ -83,9 +83,9 @@ class DashBoard extends Component {
                         handleUpload={response => this.handleUpload(response)}
                       />
                     </div>
+                    <div className="col-9 px-4">
                   {!this.state.isNextStep ? (
                     <>
-                    <div className="col-9 px-4">
                       {this.state.isUploaded ? (
                         <CardView
                           isRequested={this.state.isRequested}
@@ -104,11 +104,16 @@ class DashBoard extends Component {
                           )}
                         </>
                       )}
-                    </div>
                   </>
                 ) : (
+                  this.state.loading ?
+                  <div className="m-4">
+                              <div className="loading"></div>
+                            </div>
+                            :
                   <ConsultCard results={this.state.results}></ConsultCard>
                 )}
+              </div>
               </div>
             ) : (
               <GraphtsGrid />

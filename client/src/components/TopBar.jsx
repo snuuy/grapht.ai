@@ -24,10 +24,10 @@ class TopBar extends Component {
                 background: "#F1AD40"
               }}
             >
-              ZR
+              {localStorage.getItem("userType") == "client" ? "ZR" : "LL" }
             </div>
             <div className="text-white text-shadow font-weight-bold d-inline-block">
-              Zackary Ren
+              {localStorage.getItem("userType") == "client" ? "Zackary Ren" : "Longxi Lin" }
             </div>
           </div>
         </div>

@@ -36,6 +36,7 @@ export default class GraphtsGrid extends React.Component {
   }
 
     goBack() {
+        this.loadGraphts();
         this.setState({selectedGrapht:null})
     }
 

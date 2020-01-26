@@ -14,12 +14,12 @@ class ConsultCard extends Component {
   render() {
     return (
       <div>
-        <div className="row pl-4 pt-2">
+        <div className="row pt-2">
           <div className="col-12">
-            <div className="card mr-3 mt-3 pb-3">
-              <div className="card-header cardTitle">Grapht #000123</div>
+            <div className="card mr-3 mt-3 pb-5">
+            <div className="card-header cardTitle">Grapht #{this.props.results.grapht.id.slice(18).toUpperCase()}</div>
               <div className="row mt-4 ml-4 mb-0 pb-0">
-                <div className="col-4 m-0 px-4 pb-0">
+                <div className="col-4 m-0 pb-0">
                   <img
                     className="cardImg img-thumbnail"
                     style={{ maxWidth: "100%" }}
@@ -36,54 +36,61 @@ class ConsultCard extends Component {
                     <p className="firstCardText">Dr. Lin's Diagnosis</p>
                   </div>
                   <div className="row secondCardText">
-                    <p>Nevus</p>
+                    <p className="col-12 px-0">{this.props.results.grapht.doctorDiagnosis.condition}</p>
+                    <div className="text-muted h6 col-12 px-0">{Math.round(parseFloat(this.props.results.grapht.doctorDiagnosis.confidence))}% confidence</div>
                   </div>
                   <div className="row thirdCardText">
                     <button type="button" class="btn btn-secondary btnText">
-                      Read more about this condition
+                      Read more
                     </button>
-                  </div>
+                  </div> 
+                  
+                <div style={{transform:"scale(0.8)", marginLeft:"-30px"}}>
                   <div className="row pt-3">
-                    <p className="firstCardText">Grapht AI Major Prediction:</p>
+                    <p className="text-muted h6">Grapht AI Prediction:</p>
                   </div>
-                  <div className="row secondCardText">
-                    <p>Nevus</p>
+                  <div className="row color-purple h4">
+                  <p className="col-12 px-0">{this.props.results.grapht.aiDiagnosis.condition}</p>
+                    <div className="text-muted h6 col-12 px-0">{Math.round(parseFloat(this.props.results.grapht.aiDiagnosis.confidence)*100)}% confidence</div>
                   </div>
                   <div className="row thirdCardText">
                     <button type="button" class="btn btn-secondary btnText">
-                      Read more about this condition
+                      Read more
                     </button>
                   </div>
+                  </div>
+
                 </div>
-                <div className="col-4">
+                <div className="col-4 px-4 border-left text-center">
                   <div className="m-0">
-                    <div className="row">
-                      <p className="firstCardText ml-4">Diagnosed By:</p>
+                    <div className="text-center">
+                      <p className="firstCardText text-center mr-2">Diagnosed By</p>
                     </div>
                     <div
-                      className="text-white font-weight-bold text-center p-1 d-inline-block mr-2 row"
+                      className="text-white font-weight-bold text-center p-1 d-inline-block row"
                       style={{
                         borderRadius: "50%",
-                        width: "200px",
-                        height: "200px",
-                        background: "#44A345"
+                        width: "140px",
+                        height: "140px",
+                        background: "#F0B556"
                       }}
                     >
                       <p className="vertText mt-3">LL</p>
                     </div>
-                    <div className="row">
-                      <p className="firstCardText consultText mt-1 ml-5 mb-0">
+                    <div className="text-center mt-3">
+                      <p className="firstCardText text-center text-dark consultText mt-1 mb-0">
                         LongXi Lin
                       </p>
                     </div>
-                    <div className="row">
-                      <p className="firstCardText consultText mt-0 ml-2">
+                    <div className="text-center">
+                      <p className="font-weight-bold text-center mt-0">
                         M.D Sunnybrook
                       </p>
+                      <div className="btn btn-primary btn-sm mx-auto px-4">Contact</div>
                     </div>
                   </div>
                 </div>
-              </div>
+                </div>
             </div>
           </div>
         </div>

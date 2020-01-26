@@ -60,7 +60,7 @@ export default class GraphtsGrid extends React.Component {
                             <div className="col-7 p-4">
                                 <div className="text-muted">Grapht AI Major Prediction:</div>
                                 <div className="color-purple h2">{grapht.aiDiagnosis.condition || "N/A" }</div>
-                                <div className="text-dark">Confidence: {parseInt(grapht.aiDiagnosis.confidence)}%</div>
+                                <div className="text-dark">Confidence: {parseInt(grapht.aiDiagnosis.confidence * 100)}%</div>
                                 <div className="bg-light rounded p-3 mt-4 w-auto">
                                     { !this.state.loading ? 
                                         this.state.sentDiagnosis ?
@@ -74,8 +74,8 @@ export default class GraphtsGrid extends React.Component {
                                         <option value="Seborrheic Keratosis">Seborrheic Keratosis</option>
                                         <option value="None">None</option>
                                     </select>
-                                    <input type="number" className="mt-3 form-control w-50" onChange={(e) => this.setState({confidence:e.target.value})} placeholder="Confidence (%)"/>
-                                    <div onClick={() => this.sendDiagnosis()} className="btn-primary btn rounded mt-2">Submit Diagnosis</div>
+                                    <input type="number" className="mt-2 form-control w-50" onChange={(e) => this.setState({confidence:e.target.value})} placeholder="Confidence (%)"/>
+                                    <div onClick={() => this.sendDiagnosis()} className="btn-primary btn btn-lg mt-3">Submit Diagnosis</div>
                                     </>
                                     :
                                     <div className="p-5"><div className="loading"></div></div>  

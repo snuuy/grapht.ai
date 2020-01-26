@@ -9,9 +9,9 @@ class CardView extends Component {
       <div className="row pr-5 pt-2">
         <div className="col-md-12">
           <div className="card mr-3 mt-3 pb-3 w-100">
-            <div className="card-header cardTitle">Grapht #000123</div>
+            <div className="card-header cardTitle">Grapht #{this.props.results.grapht.id.slice(18).toUpperCase()}</div>
             <div className="row mt-4 ml-4 mb-0 pb-0">
-              <div className="col-5 m-0 px-4">
+              <div className="col-5 m-0 px-4 mb-4">
                 <img
                   className="cardImg img-thumbnail"
                   style={{ width: "100%" }}
@@ -25,11 +25,11 @@ class CardView extends Component {
               </div>
               <div className="col-5 text-left mt-0 pb-0">
                 <div className="row">
-                  <p className="firstCardText">Grapht AI Major Prediction:</p>
+                  <p className="firstCardText m-0">Grapht AI Major Prediction:</p>
                 </div>
-                <div className="row secondCardText">
-                  <p>{this.props.results.grapht.aiDiagnosis.condition || "N/A"}</p>
-                  <p className="text-muted small">{Math.round(parseFloat(this.props.results.grapht.aiDiagnosis.confidence)*100)}% confidence</p>
+                <div className="row secondCardText my-3">
+                  <div className="col-12 p-0">{this.props.results.grapht.aiDiagnosis.condition || "N/A"}</div>
+                  <div className="text-muted h6 col-12 px-0 pt-2">{Math.round(parseFloat(this.props.results.grapht.aiDiagnosis.confidence)*100)}% confidence</div>
                 </div>
                 <div className="row thirdCardText">
                   <button type="button" class="btn btn-secondary btnText">
@@ -39,8 +39,8 @@ class CardView extends Component {
               </div>
             </div>
             <div className="row">
-              <p className="col-12 text-center mx-auto fourthCardText">
-                Where To Go From Here?
+              <p className="col-12 text-center mx-auto h6 text-dark">
+                Where to go from here?
               </p>
             </div>
             <div className="row ml-5 mr-5 cardbox">

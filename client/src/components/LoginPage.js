@@ -6,6 +6,16 @@ export default class LandingPage extends React.Component {
         super(props)
     }
 
+    redirect() {
+        setTimeout(
+            function () {
+                this.props.history.push('/dashboard')
+            }
+                .bind(this),
+            1000
+        );
+    }
+
     render() {
         return (
             <div className="row" style={{ height: "100vh" }}>
@@ -17,7 +27,7 @@ export default class LandingPage extends React.Component {
                             </div>
                             <div className="col-7 p-4 text-center p-5" style={{ borderLeft: "3px solid #394279" }}>
                                 <div className="px-5 mx-4">
-                                    <div className="color-purple h2 mb-5">Client Login</div>
+                                    <div className="color-purple h2 mb-5 font-weight-bold">Login</div>
                                     <div className="form-group">
                                         <input type="email" className="form-control" placeholder="E-mail address" />
                                     </div>
@@ -29,9 +39,7 @@ export default class LandingPage extends React.Component {
                                             <button disabled type="submit" className="rounded btn btn-secondary col-6 float-left">Register</button>
                                         </div>
                                         <div className="col-6">
-                                            <a href="/dashboard">
-                                                <button type="submit" className="rounded btn btn-primary col-6 float-right">Login</button>
-                                            </a>
+                                            <button type="submit" className="rounded btn btn-primary col-6 float-right" onClick={() => this.redirect()}>Login</button>
                                         </div>
                                     </div>
                                 </div>

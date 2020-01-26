@@ -52,6 +52,11 @@ router.post("/upload", upload.single('img'), async (req, res) => {
         }
     }
 
+    if (predictionScore < 0.5) {
+        predictionScore = 1 - predictionScore
+        predictionName = "None"
+    }
+
     await Grapht.create({
         image: img,
         type: req.file.mimetype,

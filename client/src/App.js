@@ -6,6 +6,7 @@ import LoginPage from "./components/LoginPage";
 import DashBoard from "./components/Dashboard";
 
 function App() {
+  document.title = "Grapht.ai"
   return (
     <BrowserRouter>
       <Switch>
