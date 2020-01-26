@@ -19,8 +19,16 @@ class DashBoard extends Component {
           <div className="col-2 p-0" style={{ height: "calc(100vh - 83px)" }}>
             <NavBar userType={this.state.userType} />
           </div>
+
           <div className="col-10 bg-white">
-            <CardView></CardView>
+            <div className="row">
+              <div className="col">
+                <Upload></Upload>
+              </div>
+              <div className="col">
+                <CardView></CardView>
+              </div>
+            </div>
           </div>
         </div>
       </div>
