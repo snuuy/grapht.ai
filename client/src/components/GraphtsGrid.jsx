@@ -1,39 +1,39 @@
-import React from 'react'; 
+import React from "react";
 import icon_refresh from "../assets/icons/refresh.png";
 import DiagnoseCard from "./DiagnoseCard";
 export default class GraphtsGrid extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            loading: true,
-            graphts: []
-        }
-        this.date = new Date();
-    }
-    
-    componentDidMount() {
-        this.loadGraphts()
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+      graphts: []
+    };
+    this.date = new Date();
+  }
 
-    selectGrapht(grapht) {
-        this.setState({selectedGrapht:grapht})
-    }
+  componentDidMount() {
+    this.loadGraphts();
+  }
 
-    loadGraphts() {
-        this.setState({loading:true})
-        var request = new XMLHttpRequest();
-        request.open("GET", "/api/grapht/all");
-        request.send();
-        request.onreadystatechange = event => {
-            if (event.target.readyState === 4 && event.target.status === 200 && event.target.responseText) {
-                const response = JSON.parse(event.target.responseText);
-                this.setState({graphts:response.filter((g => g.doctorRequested)), loading: false})
-            }
-            if (event.target.status === 400 || event.target.status === 500) {
-                console.log("error")
-            }
-        }
-    }
+  loadGraphts() {
+    this.setState({ loading: true });
+    var request = new XMLHttpRequest();
+    request.open("GET", "/api/grapht/all");
+    request.send();
+    request.onreadystatechange = event => {
+      if (
+        event.target.readyState === 4 &&
+        event.target.status === 200 &&
+        event.target.responseText
+      ) {
+        const response = JSON.parse(event.target.responseText);
+        this.setState({ graphts: response, loading: false });
+      }
+      if (event.target.status === 400 || event.target.status === 500) {
+        console.log("error");
+      }
+    };
+  }
 
     goBack() {
         this.setState({selectedGrapht:null})
@@ -66,8 +66,11 @@ export default class GraphtsGrid extends React.Component {
                             </div>
                         ) : <div className="px-4 text-muted">There are no graphts currently ready for diagnosis</div>}
                 </div>
-                </>
-            );
-        }
+              </div>
+            ))}
+          </div>
+        </>
+      );
     }
+  }
 }

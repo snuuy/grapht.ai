@@ -107,6 +107,12 @@ a:hover {
   padding-bottom: 8px;
 }
 
+.cardbox2 {
+  border-radius: 8px;
+  background-color: white;
+  height: 100px;
+}
+
 .firstCardText {
   font-family: Poppins;
   font-size: 21px;
@@ -200,6 +206,21 @@ a:hover {
   opacity: 0.9;
 }
 
+.scale {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.diagnosis {
+  text-align: right;
+  margin: 1000px;
+}
+
+.vertText {
+  font-size: 72pt;
+}
 .btn {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -218,7 +239,7 @@ a:hover {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  color:transparent;
+  color: transparent;
   animation: spin 1s linear infinite;
   display: inline-block;
   margin-right: 4px;
@@ -233,14 +254,26 @@ a:hover {
 }
 
 @-moz-keyframes spin {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(360deg); }
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
 @-webkit-keyframes spin {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); }
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

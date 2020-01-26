@@ -12,9 +12,18 @@ class CardView extends Component {
             <div className="card-header cardTitle">Grapht #000123</div>
             <div className="row mt-4 ml-4 mb-0 pb-0">
               <div className="col-5 m-0 px-4">
-                <img className="cardImg img-thumbnail" style={{width:"100%"}} src={"data:"+this.props.results.grapht.type+";base64," + this.props.results.grapht.image}></img>
+                <img
+                  className="cardImg img-thumbnail"
+                  style={{ width: "100%" }}
+                  src={
+                    "data:" +
+                    this.props.results.grapht.type +
+                    ";base64," +
+                    this.props.results.grapht.image
+                  }
+                ></img>
               </div>
-              <div className="col-7 text-left mt-4">
+              <div className="col-5 text-left mt-4 pb-0">
                 <div className="row">
                   <p className="firstCardText">Grapht AI Major Prediction:</p>
                 </div>
@@ -36,7 +45,12 @@ class CardView extends Component {
             <div className="row ml-5 mr-5 cardbox">
               <div className="row col">
                 <div className="col-6 pt-3 text-center">
-                  <button onClick={this.props.nextStep} type="button" style={{background:"#fc8766"}} class="btn text-white btn-lg btnText">
+                  <button
+                    onClick={this.props.nextStep}
+                    type="button"
+                    style={{ background: "#fc8766" }}
+                    class="btn text-white btn-lg btnText"
+                  >
                     Ask A Local Derm
                   </button>
                   <p className="smallButtonText pt-2 text-center">
