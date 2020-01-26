@@ -3,8 +3,7 @@ const mongoose = require("mongoose");
 const router = express.Router();
 const { Grapht } = require("../dbService");
 const multer = require('multer')
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage })
+const upload = multer({ dest: 'uploads/' })
 const fs = require('fs')
 
 router.post("/upload", upload.single('img'), (req, res) => {
@@ -44,6 +43,12 @@ router.get("/all", (req, res) => {
 
 router.post("/diagnose", (req, res) => {
     Grapht.findByIdAndUpdate(mongoose.Types.ObjectId(req.body.graphtId), { doctorDiagnosis: req.body.diagnosis })
+        .then(grapht => res.status(200).send(grapht))
+        .catch(err => res.status(500).send(err))
+});
+
+router.post("/request-doctor", (req, res) => {
+    Grapht.findByIdAndUpdate(mongoose.Types.ObjectId(req.body.graphtId), { doctorRequested: true })
         .then(grapht => res.status(200).send(grapht))
         .catch(err => res.status(500).send(err))
 });
