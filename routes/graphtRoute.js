@@ -2,15 +2,15 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
 const { Grapht } = require("../dbService");
+const multer = require('multer')
+const upload = multer({ dest: 'uploads/' })
 
-router.post("/upload", (req, res) => {
-
-    /* do image upload stuff */
-
-    /*do cv stuff..*/
-
+router.post("/upload", upload.single('img'), (req, res) => {
+    if (!req.file) {
+        res.status(400).send("No file selected")
+    }
     Grapht.create({
-        image: "test.jpg",
+        image: req.file.filename,
         diagnosis: {
             confidence: 5,
             condition: "test"

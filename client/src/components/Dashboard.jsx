@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./NavBar";
 import TopBar from "./TopBar";
 import CardView from "./CardView";
+import Upload from "./Upload";
 class DashBoard extends Component {
   constructor(props) {
     super(props);

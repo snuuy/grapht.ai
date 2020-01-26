@@ -53,7 +53,7 @@ html {
 }
 
 .iconFormat {
-  max-width: 20px;
+  max-height: 15px;
   margin-bottom: -2px;
 }
 
@@ -186,4 +186,17 @@ a:hover {
 
 .btnText {
   font-weight: bold;
+}
+.box-shadow {
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.upload-btn {
+  background: #04443b;
+  width: 200px;
+  cursor: pointer;
+}
+.upload-btn:hover {
+  opacity: 0.9;
 }
