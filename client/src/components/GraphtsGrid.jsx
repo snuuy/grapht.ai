@@ -1,5 +1,6 @@
 import React from "react";
 import icon_refresh from "../assets/icons/refresh.png";
+import DiagnoseCard from "./DiagnoseCard";
 export default class GraphtsGrid extends React.Component {
   constructor(props) {
     super(props);

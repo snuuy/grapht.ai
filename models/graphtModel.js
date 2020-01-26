@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 
 let graphtSchema = new mongoose.Schema({
   image: String,
+  type: String,
+  doctorRequested: Boolean,
   doctorDiagnosis: {
     confidence: Number,
     condition: String
