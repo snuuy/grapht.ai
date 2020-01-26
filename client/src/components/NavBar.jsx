@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import icon_home from "../assets/icons/home_navy.png";
 import icon_reports from "../assets/icons/reports.png";
 import icon_explore from "../assets/icons/explore.png";
-import icon_analytics from "../assets/icons/analytics.png";
+import icon_search from "../assets/icons/search.png";
 
 var navColor = "red";
 
@@ -28,7 +28,7 @@ class NavBar extends Component {
             Explore
           </div>
           <div className="p-1 rounded text-center mb-2" style={{background:"#394279"}}>
-            <img className="d-inline-block iconFormat align-middle" src={icon_analytics}/>
+            <img className="d-inline-block iconFormat align-middle" src={icon_search}/>
             <div className="d-inline-block ml-2 text-white align-middle">Custom search</div>
           </div>
           <div className="p-1 rounded text-center" style={{background:"#394279"}}>

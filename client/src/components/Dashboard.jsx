@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import TopBar from "./TopBar";
 import CardView from "./CardView";
 import Upload from "./Upload";
+import GraphtsGrid from "./GraphtsGrid";
 class DashBoard extends Component {
   constructor(props) {
     super(props);
@@ -28,6 +29,7 @@ class DashBoard extends Component {
             <NavBar userType={this.state.userType} />
           </div>
           <div className="col-10 bg-white">
+            {this.state.userType == "client" ?
             <div className="row">
               { !this.state.isNextStep ? 
               <>
@@ -50,6 +52,7 @@ class DashBoard extends Component {
                 </> 
               }
             </div>
+            : <GraphtsGrid/> }
           </div>
         </div>
       </div>
