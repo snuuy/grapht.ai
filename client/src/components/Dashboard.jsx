@@ -13,7 +13,7 @@ class DashBoard extends Component {
   render() {
     return (
       <div>
-        <TopBar userType={this.state.userType}/>
+        <TopBar username="test" userType={this.state.userType}/>
         <div className="row">
           <div className="col-2 p-0" style={{height:"calc(100vh - 83px)"}}>
             <NavBar userType={this.state.userType}/>

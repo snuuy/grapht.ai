@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import icon_home from "../assets/icons/home_navy.png";
 import icon_reports from "../assets/icons/reports.png";
+import icon_explore from "../assets/icons/explore.png";
+import icon_analytics from "../assets/icons/analytics.png";
 
 var navColor = "red";
 
@@ -13,13 +15,25 @@ class NavBar extends Component {
           <div className="font-weight-bold mb-3">
             Overview
           </div>
-          <div className="p-2 rounded text-center" style={{background:"#F1AD40"}}>
+          <div className="p-1 rounded text-center mb-2" style={{background:"#F0B556"}}>
             <img className="d-inline-block iconFormat align-middle" src={icon_home}/>
-            <div className="d-inline-block ml-2  color-purple align-middle" style={{background:"#F1AD40"}}>Dashboard</div>
+            <div className="d-inline-block ml-2  color-purple align-middle">Dashboard</div>
           </div>
-          <div className="p-2 rounded text-center bg-white">
+          <div className="p-1 rounded text-center" style={{background:"#394279"}}>
             <img className="d-inline-block iconFormat align-middle" src={icon_reports}/>
-            <div className="d-inline-block ml-2  color-purple align-middle" style={{background:"#F1AD40"}}>Dashboard</div>
+            <div className="d-inline-block ml-2 text-white align-middle">View Reports</div>
+          </div>
+
+          <div className="font-weight-bold mb-3 mt-5">
+            Explore
+          </div>
+          <div className="p-1 rounded text-center mb-2" style={{background:"#394279"}}>
+            <img className="d-inline-block iconFormat align-middle" src={icon_analytics}/>
+            <div className="d-inline-block ml-2 text-white align-middle">Custom search</div>
+          </div>
+          <div className="p-1 rounded text-center" style={{background:"#394279"}}>
+            <img className="d-inline-block iconFormat align-middle" src={icon_explore}/>
+            <div className="d-inline-block ml-2 text-white align-middle">What's new</div>
           </div>
         </div>
     );
