@@ -59,8 +59,8 @@ export default class GraphtsGrid extends React.Component {
                             </div>
                             <div className="col-7 p-4">
                                 <div className="text-muted">Grapht AI Major Prediction:</div>
-                                <div className="color-purple h2">{grapht.aiDiagnosis || "N/A" }</div>
-                                <div className="text-dark">Confidence: N/A</div>
+                                <div className="color-purple h2">{grapht.aiDiagnosis.condition || "N/A" }</div>
+                                <div className="text-dark">Confidence: {grapht.aiDiagnosis.confidence}</div>
                                 <div className="bg-light rounded p-3 mt-4 w-auto">
                                     { !this.state.loading ? 
                                         this.state.sentDiagnosis ?

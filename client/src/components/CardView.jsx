@@ -28,7 +28,8 @@ class CardView extends Component {
                   <p className="firstCardText">Grapht AI Major Prediction:</p>
                 </div>
                 <div className="row secondCardText">
-                  <p>{this.props.results.prediction || "N/A"}</p>
+                  <p>{this.props.results.grapht.aiDiagnosis.condition || "N/A"}</p>
+                  <p className="text-muted small">{Math.round(parseFloat(this.props.results.grapht.aiDiagnosis.confidence)*100)}% confidence</p>
                 </div>
                 <div className="row thirdCardText">
                   <button type="button" class="btn btn-secondary btnText">

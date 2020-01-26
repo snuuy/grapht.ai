@@ -4,21 +4,60 @@ const router = express.Router();
 const { Grapht } = require("../dbService");
 const multer = require('multer')
 const upload = multer({ dest: 'uploads/' })
+const automl = require("@google-cloud/automl")
 const fs = require('fs')
 
-router.post("/upload", upload.single('img'), (req, res) => {
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+router.post("/upload", upload.single('img'), async (req, res) => {
     if (!req.file) {
         res.status(400).send("No file selected")
-        return
+        return;
     }
+
+    const client = new automl.PredictionServiceClient();
+
+    const projectId = "grapht";
+    const computeRegion = "us-central1";
+    const modelId = "ICN122525177752846336";
+    const filePath = req.file.path;
+    const scoreThreshold = "0.5";
+    const params = { score_threshold: 0.0 };
+
+    // Get the full path of the model.
+    const modelFullId = client.modelPath(projectId, computeRegion, modelId);
+
+    // Read the file content for prediction.
     let img = fs.readFileSync(req.file.path)
-    img = Buffer(img).toString('base64');
-    Grapht.create({
+    img = Buffer.from(img).toString('base64');
+
+    const payload = {};
+    payload.image = { imageBytes: img };
+
+    const [response] = await client.predict({
+        name: modelFullId,
+        payload: payload,
+        params: params,
+    });
+
+    let predictionName = ""
+    let predictionScore = 0
+
+    for (result of response.payload) {
+        if (result.classification.score >= predictionScore) {
+            predictionScore = result.classification.score
+            predictionName = result.displayName
+        }
+    }
+
+    await Grapht.create({
         image: img,
         type: req.file.mimetype,
-        diagnosis: {
-            confidence: 5,
-            condition: "test"
+        aiDiagnosis: {
+            confidence: predictionScore,
+            condition: (predictionName == "seborrheic_keratosis" ? "Seborrheic Keratosis" : capitalizeFirstLetter(predictionName))
         }
     })
         .then(grapht => res.status(200).send({ grapht }))

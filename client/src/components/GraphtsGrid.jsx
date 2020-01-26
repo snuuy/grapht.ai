@@ -66,9 +66,6 @@ export default class GraphtsGrid extends React.Component {
                             </div>
                         ) : <div className="px-4 text-muted">There are no graphts currently ready for diagnosis</div>}
                 </div>
-              </div>
-            ))}
-          </div>
         </>
       );
     }
