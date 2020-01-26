@@ -46,6 +46,7 @@ router.post("/upload", upload.single('img'), async (req, res) => {
     let predictionScore = 0
 
     for (result of response.payload) {
+        console.log(result)
         if (result.classification.score >= predictionScore) {
             predictionScore = result.classification.score
             predictionName = result.displayName

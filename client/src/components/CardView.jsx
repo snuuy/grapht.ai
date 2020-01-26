@@ -5,6 +5,7 @@ class CardView extends Component {
   state = {};
 
   render() {
+    let condition = this.props.results.grapht.aiDiagnosis.condition
     return (
       <div className="row pr-5 pt-2">
         <div className="col-md-12">
@@ -32,9 +33,11 @@ class CardView extends Component {
                   <div className="text-muted h6 col-12 px-0 pt-2">{Math.round(parseFloat(this.props.results.grapht.aiDiagnosis.confidence)*100)}% confidence</div>
                 </div>
                 <div className="row thirdCardText">
+                  <a href={condition == "Melanoma" ? "https://www.webmd.com/melanoma-skin-cancer/default.htm" : (condition == "Nevus" ? "https://en.wikipedia.org/wiki/Nevus" : "https://www.webmd.com/skin-problems-and-treatments/picture-of-seborrheic-keratosis")}>
                   <button type="button" class="btn btn-secondary btnText">
                     Read more about this condition
                   </button>
+                  </a>
                 </div>
               </div>
             </div>
