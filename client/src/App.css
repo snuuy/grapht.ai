@@ -52,22 +52,10 @@ html {
 }
 
 .iconFormat {
-  height: 20px;
-  width: 20px;
+  max-width: 20px;
+  margin-bottom: -2px;
 }
 
-.topbar {
-  background-color: blue;
-  height: 75px;
-  width: max;
-}
-
-.logo {
-  height: 80%;
-  margin: auto;
-  display: block;
-  padding-top: 5px;
-}
 .landing-bg {
   height: 100vh;
   width: 100%;
