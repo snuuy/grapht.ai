@@ -65,7 +65,7 @@ router.post("/upload", upload.single('img'), async (req, res) => {
             condition: (predictionName == "seborrheic_keratosis" ? "Seborrheic Keratosis" : capitalizeFirstLetter(predictionName))
         }
     })
-        .then(grapht => res.status(200).send({ grapht }))
+        .then(grapht => setTimeout(() => res.status(200).send({ grapht }), 2000))
         .catch(err => res.status(400).send(err))
 });
 
