@@ -1,3 +1,7 @@
+body, html {
+  background: white;
+}
+
 .bg-green {
   color: rgb(11, 96, 72) !important;
   background: rgba(11, 96, 72, 0.3)
@@ -13,6 +17,55 @@
   background: rgba(57, 66, 121, 0.3);
 }
 
+.color-purple {
+  color: rgb(57, 66, 121) !important;
+}
+
+.btn-primary {
+  background: rgb(57, 66, 121) !important;
+  color: white !important;
+  border: none;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
+}
+
+.landing-btn {
+  cursor: pointer;
+}
+
+.landing-btn:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 0 0 10px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.1);
+}
+
 .rounded {
   border-radius: 5px !important;
+}
+
+.landing-bg {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 100vh;
+  padding: 0 !important; 
+}
+
+* {
+  -webkit-transition: all 0.4s ease;
+-moz-transition: all 0.4s ease;
+-ms-transition: all 0.4s ease;
+-o-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
