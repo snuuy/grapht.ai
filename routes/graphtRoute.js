@@ -75,7 +75,7 @@ router.get("/image/:graphtid", async (req, res) => {
 });
 
 router.get("/all", (req, res) => {
-    Grapht.find()
+    Grapht.find().sort('-date')
         .then(graphts => res.status(200).send(graphts))
         .catch(err => res.status(500).send(err))
 });

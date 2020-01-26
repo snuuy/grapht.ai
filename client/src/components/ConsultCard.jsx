@@ -14,15 +14,15 @@ class ConsultCard extends Component {
   render() {
     return (
       <div>
-        <div className="row pl-4 m-auto pt-2">
-          <div className="col-11">
-            <div className="card mr-3 mt-3 pb-3 w-100">
+        <div className="row pl-4 pt-2">
+          <div className="col-12">
+            <div className="card mr-3 mt-3 pb-3">
               <div className="card-header cardTitle">Grapht #000123</div>
               <div className="row mt-4 ml-4 mb-0 pb-0">
                 <div className="col-4 m-0 px-4 pb-0">
                   <img
                     className="cardImg img-thumbnail"
-                    style={{ width: "100%" }}
+                    style={{ maxWidth: "100%" }}
                     src={
                       "data:" +
                       this.props.results.grapht.type +

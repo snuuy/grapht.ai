@@ -23,7 +23,7 @@ class CardView extends Component {
                   }
                 ></img>
               </div>
-              <div className="col-5 text-left mt-4 pb-0">
+              <div className="col-5 text-left mt-0 pb-0">
                 <div className="row">
                   <p className="firstCardText">Grapht AI Major Prediction:</p>
                 </div>
@@ -47,12 +47,13 @@ class CardView extends Component {
               <div className="row col">
                 <div className="col-6 pt-3 text-center">
                   <button
-                    onClick={this.props.nextStep}
+                    disabled={this.props.isRequested}
+                    onClick={this.props.requestDerm}
                     type="button"
                     style={{ background: "#fc8766" }}
                     class="btn text-white btn-lg btnText"
                   >
-                    Ask A Local Derm
+                    { this.props.isRequested ? "Consultation Requested" : "Ask A Local Derm" }
                   </button>
                   <p className="smallButtonText pt-2 text-center">
                     3.99/Consult
