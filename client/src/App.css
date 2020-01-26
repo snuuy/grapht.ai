@@ -77,13 +77,13 @@ html {
   padding: 0 !important;
 }
 
-* {
+/* * {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
+} */
 
 a:hover {
   text-decoration: none !important;
@@ -109,7 +109,7 @@ a:hover {
 
 .cardbox2 {
   border-radius: 8px;
-  background-color: #f5f5f5;
+  background-color: white;
   height: 100px;
 }
 
@@ -220,4 +220,63 @@ a:hover {
 
 .vertText {
   font-size: 72pt;
+}
+.btn {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.loading {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid rgb(57, 66, 121); /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: transparent;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.grid-img {
+  cursor: pointer;
+}
+
+.grid-img:hover {
+  opacity: 0.8;
+}
+
+.consultText {
+  text-align: center;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

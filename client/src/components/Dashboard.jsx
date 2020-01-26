@@ -4,13 +4,21 @@ import TopBar from "./TopBar";
 import CardView from "./CardView";
 import Upload from "./Upload";
 import ConsultCard from "./ConsultCard";
+import GraphtsGrid from "./GraphtsGrid";
 class DashBoard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       userType: localStorage.getItem("userType"),
-      isNextStep: false
+      isNextStep: false,
+      isUploaded: false,
+      loading: false,
+      results: {}
     };
+  }
+
+  handleUpload(results) {
+    this.setState({ results: results, isUploaded: true });
   }
 
   render() {
@@ -23,22 +31,44 @@ class DashBoard extends Component {
           </div>
 
           <div className="col-10 bg-white">
-            <div className="row">
-              {!this.state.isNextStep ? (
-                <>
-                  <div className="col-3 pt-4 pr-0 pl-4">
-                    <Upload />
-                  </div>
-                  <div className="col-9 px-4">
-                    <CardView
-                      nextStep={() => this.setState({ isNextStep: true })}
-                    />
-                  </div>
-                </>
-              ) : (
-                <ConsultCard></ConsultCard>
-              )}
-            </div>
+            {this.state.userType == "client" ? (
+              <div className="row">
+                {!this.state.isNextStep ? (
+                  <>
+                    <div className="col-3 pt-4 pr-0 pl-4">
+                      <Upload
+                        toggleLoading={() =>
+                          this.setState({ loading: !this.state.loading })
+                        }
+                        handleUpload={response => this.handleUpload(response)}
+                      />
+                    </div>
+                    <div className="col-9 px-4">
+                      {this.state.isUploaded ? (
+                        <CardView
+                          results={this.state.results}
+                          nextStep={() => this.setState({ isNextStep: true })}
+                        />
+                      ) : (
+                        <>
+                          {this.state.loading ? (
+                            <div className="m-4">
+                              <div className="loading"></div>
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                        </>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <ConsultCard results={this.state.results}></ConsultCard>
+                )}
+              </div>
+            ) : (
+              <GraphtsGrid />
+            )}
           </div>
         </div>
       </div>
