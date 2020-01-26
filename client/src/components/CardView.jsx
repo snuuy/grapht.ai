@@ -6,18 +6,15 @@ class CardView extends Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-md-2">
-          <p>Placeholder</p>
-        </div>
-        <div className="col-md-10">
-          <div className="card m-3 pb-3 w-50">
+      <div className="row pr-5 pt-2">
+        <div className="col-md-12">
+          <div className="card mr-3 mt-3 pb-3 w-100">
             <div className="card-header cardTitle">Grapht #000123</div>
             <div className="row mt-4 ml-4 mb-0 pb-0">
-              <div className="col-5 m-0 p-0">
-                <img className="cardImg img-thumbnail" src={fillerimg}></img>
+              <div className="col-5 m-0 px-4">
+                <img className="cardImg img-thumbnail" style={{width:"100%"}} src={fillerimg}></img>
               </div>
-              <div className="col-7">
+              <div className="col-7 text-left mt-4">
                 <div className="row">
                   <p className="firstCardText">Grapht AI Major Prediction:</p>
                 </div>
@@ -32,7 +29,7 @@ class CardView extends Component {
               </div>
             </div>
             <div className="row">
-              <p className="col-5 mx-auto fourthCardText">
+              <p className="col-12 text-center mx-auto fourthCardText">
                 Where To Go From Here?
               </p>
             </div>

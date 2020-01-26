@@ -20,7 +20,14 @@ class DashBoard extends Component {
             <NavBar userType={this.state.userType} />
           </div>
           <div className="col-10 bg-white">
-            <CardView></CardView>
+            <div className="row">
+              <div className="col-3 pt-4 pr-0 pl-4">
+              <Upload/>
+              </div>
+              <div className="col-9 px-4">
+              <CardView/>
+              </div>
+            </div>
           </div>
         </div>
       </div>
