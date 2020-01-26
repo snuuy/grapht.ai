@@ -17,7 +17,7 @@ class NavBar extends Component {
       >
         <div className="font-weight-bold mb-3">Overview</div>
         <div
-          className="p-1 rounded text-center mb-2"
+          className="p-1 rounded cursor-hand text-center mb-2"
           style={{ background: "#F0B556" }}
         >
           <img
@@ -29,7 +29,7 @@ class NavBar extends Component {
           </div>
         </div>
         <div
-          className="p-1 rounded text-center"
+          className="p-1 rounded cursor-hand text-center"
           style={{ background: "#394279" }}
         >
           <img
@@ -43,7 +43,7 @@ class NavBar extends Component {
 
         <div className="font-weight-bold mb-3 mt-5">Explore</div>
         <div
-          className="p-1 rounded text-center mb-2"
+          className="p-1 rounded cursor-hand text-center mb-2"
           style={{ background: "#394279" }}
         >
           <img
@@ -55,7 +55,7 @@ class NavBar extends Component {
           </div>
         </div>
         <div
-          className="p-1 rounded text-center"
+          className="p-1 rounded cursor-hand text-center"
           style={{ background: "#394279" }}
         >
           <img

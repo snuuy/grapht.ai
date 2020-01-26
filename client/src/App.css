@@ -278,3 +278,7 @@ a:hover {
   background: #9C9C9C !important;
   border: none;
 }
+
+.cursor-hand {
+  cursor: pointer; 
+}
