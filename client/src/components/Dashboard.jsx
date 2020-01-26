@@ -7,7 +7,8 @@ class DashBoard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userType: localStorage.getItem("userType")
+      userType: localStorage.getItem("userType"),
+      isNextStep: false
     };
   }
 
@@ -21,12 +22,18 @@ class DashBoard extends Component {
           </div>
           <div className="col-10 bg-white">
             <div className="row">
+              { !this.state.isNextStep ? 
+              <>
               <div className="col-3 pt-4 pr-0 pl-4">
               <Upload/>
               </div>
               <div className="col-9 px-4">
-              <CardView/>
+              <CardView nextStep={() => this.setState({isNextStep:true})}/>
               </div>
+              </>
+              : <>
+              TEST
+  </> }
             </div>
           </div>
         </div>

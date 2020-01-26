@@ -36,7 +36,7 @@ class CardView extends Component {
             <div className="row ml-5 mr-5 cardbox">
               <div className="row col">
                 <div className="col-6 pt-3 text-center">
-                  <button type="button" style={{background:"#fc8766"}} class="btn text-white btn-lg btnText">
+                  <button onClick={this.props.nextStep} type="button" style={{background:"#fc8766"}} class="btn text-white btn-lg btnText">
                     Ask A Local Derm
                   </button>
                   <p className="smallButtonText pt-2 text-center">
