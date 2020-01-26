@@ -24,11 +24,11 @@ class DashBoard extends Component {
     return (
       <div>
         <TopBar userType={this.state.userType} />
-        <div className="row">
+        <div className="row" style={{overflow:"scroll !important"}}>
           <div className="col-2 p-0" style={{ height: "calc(100vh - 83px)" }}>
             <NavBar userType={this.state.userType} />
           </div>
-          <div className="col-10 bg-white">
+          <div className="col-10 bg-white" style={{overflow:"scroll !important"}}>
             {this.state.userType == "client" ?
             <div className="row">
               { !this.state.isNextStep ? 
@@ -52,7 +52,9 @@ class DashBoard extends Component {
                 </> 
               }
             </div>
-            : <GraphtsGrid/> }
+            : 
+            <GraphtsGrid/> 
+            }
           </div>
         </div>
       </div>
