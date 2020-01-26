@@ -199,3 +199,12 @@ a:hover {
 .upload-btn:hover {
   opacity: 0.9;
 }
+
+.scale {
+  width: 150%;
+  margin-left: 150px;
+}
+
+.col-5 {
+  height: 100% !important;
+}
