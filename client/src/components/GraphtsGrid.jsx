@@ -56,14 +56,15 @@ export default class GraphtsGrid extends React.Component {
                     </div>
                 </div>
                 <div className="row pr-5 pt-3 pl-4">
-                        { this.state.graphts.map((grapht, i) => 
+                        { this.state.graphts.length > 0 ?
+                         this.state.graphts.map((grapht, i) => 
                             <div className="col-3 p-2" onClick={() => this.selectGrapht(grapht)}>
                                 <img className="w-100 rounded-top box-shadow grid-img" src={"data:"+grapht.type+";base64," + grapht.image} />
                                 <div className="rounded-bottom bg-light text-dark font-weight-bold text-center p-3 border">
                                     Grapht {grapht.id.slice(16).toUpperCase()}
                                 </div>
                             </div>
-                        )}
+                        ) : <div className="px-4 text-muted">There are no graphts currently ready for diagnosis</div>}
                 </div>
                 </>
             );
