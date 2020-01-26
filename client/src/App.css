@@ -1,6 +1,6 @@
 .bg-green {
   color: rgb(11, 96, 72) !important;
-  background: rgba(11, 96, 72, 0.3)
+  background: rgba(11, 96, 72, 0.3);
 }
 
 .bg-orange {
@@ -15,4 +15,22 @@
 
 .rounded {
   border-radius: 5px !important;
+}
+
+.iconFormat {
+  height: 20px;
+  width: 20px;
+}
+
+.topbar {
+  background-color: blue;
+  height: 75px;
+  width: max;
+}
+
+.logo {
+  height: 80%;
+  margin: auto;
+  display: block;
+  padding-top: 5px;
 }
