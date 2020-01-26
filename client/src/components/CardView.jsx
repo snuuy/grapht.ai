@@ -12,14 +12,14 @@ class CardView extends Component {
             <div className="card-header cardTitle">Grapht #000123</div>
             <div className="row mt-4 ml-4 mb-0 pb-0">
               <div className="col-5 m-0 px-4">
-                <img className="cardImg img-thumbnail" style={{width:"100%"}} src={fillerimg}></img>
+                <img className="cardImg img-thumbnail" style={{width:"100%"}} src={"data:"+this.props.results.grapht.type+";base64," + this.props.results.grapht.image}></img>
               </div>
               <div className="col-7 text-left mt-4">
                 <div className="row">
                   <p className="firstCardText">Grapht AI Major Prediction:</p>
                 </div>
                 <div className="row secondCardText">
-                  <p>Nevus</p>
+                  <p>{this.props.results.prediction || "N/A"}</p>
                 </div>
                 <div className="row thirdCardText">
                   <button type="button" class="btn btn-secondary btnText">

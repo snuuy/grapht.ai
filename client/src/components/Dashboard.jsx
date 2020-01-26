@@ -8,8 +8,15 @@ class DashBoard extends Component {
     super(props);
     this.state = {
       userType: localStorage.getItem("userType"),
-      isNextStep: false
+      isNextStep: false,
+      isUploaded: false,
+      loading: false,
+      results: {}
     };
+  }
+
+  handleUpload(results) {
+    this.setState({results:results,isUploaded:true})
   }
 
   render() {
@@ -25,15 +32,23 @@ class DashBoard extends Component {
               { !this.state.isNextStep ? 
               <>
               <div className="col-3 pt-4 pr-0 pl-4">
-              <Upload/>
+              <Upload toggleLoading={() => this.setState({loading:!this.state.loading})} handleUpload={(response) => this.handleUpload(response)}/>
               </div>
               <div className="col-9 px-4">
-              <CardView nextStep={() => this.setState({isNextStep:true})}/>
+              { this.state.isUploaded ? 
+              <CardView results={this.state.results} nextStep={() => this.setState({isNextStep:true})}/>
+              : <>
+              {
+                this.state.loading ? <div className="m-4"><div className="loading"></div></div> : <></>
+              }
+              </> }
               </div>
               </>
-              : <>
-              TEST
-  </> }
+              : 
+                <>
+                  TEST
+                </> 
+              }
             </div>
           </div>
         </div>
