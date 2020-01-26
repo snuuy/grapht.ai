@@ -24,17 +24,17 @@ export default class LandingPage extends React.Component {
                     </div>
                     <div className="w-50 mx-auto">
                         <a href="/login">
-                            <div onClick={() => this.setUserType("Client")} className="p-3 rounded font-weight-bold mb-3 bg-purple text-center landing-btn">
+                            <div onClick={() => this.setUserType("client")} className="p-3 rounded font-weight-bold mb-3 bg-purple text-center landing-btn">
                                 Client
                             </div>
                         </a>
                         <a href="/login">
-                            <div onClick={() => this.setUserType("Doctor")} className="p-3 rounded font-weight-bold mb-3 bg-green text-center landing-btn">
+                            <div onClick={() => this.setUserType("doctor")} className="p-3 rounded font-weight-bold mb-3 bg-green text-center landing-btn">
                                 Medical Professional
                             </div>
                         </a>
                         <a href="/login">
-                            <div onClick={() => this.setUserType("Student")} className="p-3 rounded font-weight-bold bg-orange text-center landing-btn">
+                            <div onClick={() => this.setUserType("student")} className="p-3 rounded font-weight-bold bg-orange text-center landing-btn">
                                 Student / Educator
                             </div>
                         </a>
