@@ -10,8 +10,12 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={LandingPage} />
+<<<<<<< HEAD
         <Route exact path="/login/:userType" component={LoginPage} />
         <Route exact path="/dashboard" component={DashBoard} />
+=======
+        <Route exact path="/login" component={LoginPage} />
+>>>>>>> ee249fd44d420565fb44969b52bb2fe9231e0295
       </Switch>
     </BrowserRouter>
   );
