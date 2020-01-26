@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const router = express.Router();
 const { Grapht } = require("../dbService");
 const multer = require('multer')
-const upload = multer({ dest: 'uploads/' })
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage })
 const fs = require('fs')
 
 router.post("/upload", upload.single('img'), (req, res) => {
