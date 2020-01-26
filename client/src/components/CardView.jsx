@@ -19,7 +19,7 @@ class CardView extends Component {
                   src={fillerimg}
                 ></img>
               </div>
-              <div className="col-7 text-left mt-4 pb-0">
+              <div className="col-5 text-left mt-4 pb-0">
                 <div className="row">
                   <p className="firstCardText">Grapht AI Major Prediction:</p>
                 </div>
