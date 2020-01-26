@@ -253,9 +253,6 @@ a:hover {
   opacity: 0.8;
 }
 
-.consultText {
-  text-align: center;
-}
 @-moz-keyframes spin {
   from {
     -moz-transform: rotate(0deg);
