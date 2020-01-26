@@ -1,22 +1,61 @@
 import React, { Component } from "react";
+import fillerimg from "../assets/fillerimg.png";
 
 class CardView extends Component {
   state = {};
 
   render() {
     return (
-      <div>
-        <div className="card">
-          <div className="card-header">Featured</div>
-          <div className="card-body">
-            <h5 className="card-title">Special title treatment</h5>
-            <p className="card-text">
-              With supporting text below as a natural lead-in to additional
-              content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+      <div className="row">
+        <div className="col-md-2">
+          <p>Placeholder</p>
+        </div>
+        <div className="col-md-10">
+          <div className="card m-3 pb-3 w-50">
+            <div className="card-header cardTitle">Grapht #000123</div>
+            <div className="row mt-4 ml-4 mb-0 pb-0">
+              <div className="col-5 m-0 p-0">
+                <img className="cardImg img-thumbnail" src={fillerimg}></img>
+              </div>
+              <div className="col-7">
+                <div className="row">
+                  <p className="firstCardText">Grapht AI Major Prediction:</p>
+                </div>
+                <div className="row secondCardText">
+                  <p>Nevus</p>
+                </div>
+                <div className="row thirdCardText">
+                  <button type="button" class="btn btn-secondary btnText">
+                    Read more about this condition
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <p className="col-5 mx-auto fourthCardText">
+                Where To Go From Here?
+              </p>
+            </div>
+            <div className="row ml-5 mr-5 cardbox">
+              <div className="row col">
+                <div className="col-6 pt-3 text-center">
+                  <button type="button" class="btn btn-primary btn-lg btnText">
+                    Ask A Local Derm
+                  </button>
+                  <p className="smallButtonText pt-2 text-center">
+                    3.99/Consult
+                  </p>
+                </div>
+                <div className="col-6 mt-3 text-center">
+                  <button type="button" class="btn btn-primary btn-lg btnText">
+                    Upload to Maple
+                  </button>
+                  <p className="smallButtonText pt-2 text-center">
+                    Transfer To Maple
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

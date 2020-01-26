@@ -95,3 +95,95 @@ a:hover {
   margin: 0;
   padding: 0;
 }
+
+.cardImg {
+  width: 75%;
+  height: 75%;
+}
+
+.cardbox {
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  padding-bottom: 8px;
+}
+
+.firstCardText {
+  font-family: Poppins;
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.48;
+  letter-spacing: normal;
+  text-align: left;
+  color: #9b9b9b;
+}
+
+.secondCardText {
+  font-family: Poppins;
+  font-size: 43px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.05;
+  letter-spacing: normal;
+  text-align: left;
+  color: #0b6048;
+}
+
+.thirdCardText {
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.smallButtonText {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #9b9b9b;
+  margin: auto;
+  display: block;
+}
+
+.cardTitle {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #394279;
+}
+
+.fourthCardText {
+  font-family: Poppins;
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: bold;
+  line-height: 1.48;
+  letter-spacing: normal;
+  text-align: left;
+  color: #292929;
+}
+
+.card {
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.16) !important;
+}
+
+.btnText {
+  font-weight: bold;
+}
