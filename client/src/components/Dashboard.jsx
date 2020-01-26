@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./NavBar";
 import TopBar from "./TopBar";
 import CardView from "./CardView";
+import Upload from "./Upload"
 class DashBoard extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +19,9 @@ class DashBoard extends Component {
           <div className="col-2 p-0" style={{ height: "calc(100vh - 83px)" }}>
             <NavBar userType={this.state.userType} />
           </div>
-          <div className="col-10 bg-white"></div>
+          <div className="col-10 bg-white">
+            <Upload/>
+          </div>
         </div>
       </div>
     );

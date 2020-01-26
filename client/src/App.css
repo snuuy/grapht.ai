@@ -95,3 +95,17 @@ a:hover {
   margin: 0;
   padding: 0;
 }
+
+.box-shadow {
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.upload-btn {
+  background: #04443b;
+  width: 200px;
+  cursor: pointer;
+}
+.upload-btn:hover {
+  opacity: 0.9;
+}
