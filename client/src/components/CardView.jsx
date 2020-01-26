@@ -11,7 +11,7 @@ class CardView extends Component {
           <div className="card mr-3 mt-3 pb-3 w-100">
             <div className="card-header cardTitle">Grapht #{this.props.results.grapht.id.slice(18).toUpperCase()}</div>
             <div className="row mt-4 ml-4 mb-0 pb-0">
-              <div className="col-5 m-0 px-4 mb-4">
+              <div className="col-5 m-0 px-4 mb-3">
                 <img
                   className="cardImg img-thumbnail"
                   style={{ width: "100%" }}
@@ -38,7 +38,7 @@ class CardView extends Component {
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row mt-3 mb-1">
               <p className="col-12 text-center mx-auto h6 text-dark">
                 Where to go from here?
               </p>
